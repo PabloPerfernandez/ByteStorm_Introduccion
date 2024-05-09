@@ -2,12 +2,22 @@
 <html lang="es">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduccion Bytestorm</title>
-    <link rel="stylesheet"
-    href="Introduccion_Bytestorm_1.css"/>
+    <link rel="stylesheet" href="Introduccion_Bytestorm_1.css"/>
 </head>
 <body>
     
+    <!--Pop-up-->
+    <div class="popup-overlay" id="popup">
+        <div class="popup-content">
+          <h2>¡Bienvenido!</h2>
+          <p>Te encuentras en la web oficial de ByteStorm solutions, la empresa líder de ciberseguridad del siglo 22.</p>
+          <button onclick="closePopup()">Close</button>
+        </div>
+      </div>
+
     <!--Encabezado-->
     <header>
         <section>
@@ -20,45 +30,71 @@
             </ul>
         </section>
         <section class="icon">
-            <img src="sun-regular.png" alt="Boton">
+            <img src="sun-regular.png" id="Boton">
         </section>
     </header>
 
      <!--Sección Principal-->
+    <section class="gridMain">
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridDes"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+        <div class="gridBlank"></div>
+    </section>
     <main>
-        <section>
+        <section class="desTabla">
             <article>
                 <a id="descripcion"></a>
-                <h3>Ciberseguridad en su máxima expresión</h3>
+                <h3>Cíberseguridad en su máxima expresión</h3>
                 <p>
-                    "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem 
-                    Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem 
-                    Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem 
-                    Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem 
-                    Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+                    "ByteStorm Solutions es una empresa líder en el campo
+                    de la cíberseguridad. Velamos por proteger a todo individual,
+                    hogar y negocios. <br><br> Con una trayectoria de más de nueve décadas
+                    en el mercado, nos hemos consolidado como el socio de confianza
+                    para salvaguardar lo que más importa para nuestros clientes."
                 </p>
             </article>
             <article>
-                    <img src="Dummy.jpg" alt="Dummy"/>
+                    <img src="https://unade.edu.mx/wp-content/uploads/2020/06/la-ciberseguridad-en-la-red.jpg" alt="Dummy"/>
             </article>
         </section>
-        <section>
+        <section class="misTabla">
             <article>
                 <a id="mision"></a>
                 <h3>El método Bytestorm</h3>
                 <p>
-                    "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem 
-                    Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem 
-                    Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem 
-                    Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem 
-                    Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+                    "Nuestra empresa ofrece todo tipo de trato personalizado para
+                    cumplir con la necesidad de todo cliente. En Bytestorm contamos con
+                    la última tecnología en sistemas de detección y prevención de
+                    intrusiones, en análisis predictivo de amenazas y toda clase de opciones
+                    con precios económicos, para automatizar la anticipación, localización y neutralización de
+                    toda clase de ataques por medios digitales antes de que causen daño. <br><br>
+                    Utilizamos algoritmos avanzados de aprendizaje automático para identificar patrones
+                    y anomalías en tiempo real, asegurando una protección proactiva contra las
+                    amenazas digitales que están emergiendo en estos últimos años."
                 </p>
             </article>
             <article>
-                    <img src="Dummy.jpg" alt="Dummy"/>
+                    <img src="https://micr-sai.com.mx/wp-content/uploads/2021/04/capacitacion-en-ciberseguridad.jpg" alt="Dummy"/>
             </article>
         </section>
-        <section>
+        <section class="visTabla">
             <article>
                 <a id="vision"></a>
                 <h3>Un mundo sin cíber-amenazas</h3>
@@ -71,14 +107,14 @@
                 </p>
             </article>
             <article>
-                    <img src="Dummy.jpg" alt="Dummy"/>
+                    <img src="https://wallpaperaccess.com/full/1303168.jpg" alt="Dummy"/>
             </article>
         </section>
 
      <!--Galería de Imágenes-->
         <section class="galeria">
             <article>
-                <div id="noticias"><h3>Noticias</h3></div>                
+                <div id="noticias"><h3>Últimas noticias</h3></div>                
             </article>
             <article class="imgGrid">
                 <a class="imgGrid-row-2 imgGrid-column-2" href="https://www.abc.es/internacional/acusan-china-ciberataque-acceder-datos-personales-soldados-20240507094359-nt.html"><img src="https://s3.abcstatics.com/abc/www/multimedia/internacional/2024/05/07/1480725173-kZX-U602421165816WwC-1200x840@diario_abc.jpg" alt="imgChina"></a>
@@ -112,6 +148,21 @@
             </ul>
         </nav>
     </footer>
+
+
+    <script>
+        var icon = document.getElementById("Boton");
+        icon.onclick = function(){
+            document.body.classList.toggle("darkTheme");
+            if (document.body.classList.contains("darkTheme")) {
+                icon.src = "moon-regular.png";
+            }
+            else {
+                icon.src = "sun-regular.png";
+            }
+        }
+    </script>
+    <script src="Introducción_ByteStorm_1.js"></script>
 </body>
 
 </html>
