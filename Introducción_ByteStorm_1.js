@@ -44,17 +44,45 @@ icon.onclick = toggleDarkMode;
 
 /*Menu*/
 function scrollToDescripcion() {
-  document.getElementById('descripcion').scrollIntoView({ behavior: 'smooth' });
+  const targetElement = document.getElementById('descripcion');
+  if (targetElement) {
+    const targetPosition = targetElement.getBoundingClientRect().top;
+    const offset = 70;
+    window.scrollTo({
+      top: window.pageYOffset + targetPosition - offset, behavior: 'smooth'
+    });
+  }
 }
 
 function scrollToMision() {
-  document.getElementById('mision').scrollIntoView({ behavior: 'smooth' });
+  const targetElement = document.getElementById('mision');
+  if (targetElement) {
+    const targetPosition = targetElement.getBoundingClientRect().top;
+    const offset = 70;
+    window.scrollTo({
+      top: window.pageYOffset + targetPosition - offset, behavior: 'smooth'
+    });
+  }
 }
 
 function scrollToVision() {
-  document.getElementById('vision').scrollIntoView({ behavior: 'smooth' });
+  const targetElement = document.getElementById('vision');
+  if (targetElement) {
+    const targetPosition = targetElement.getBoundingClientRect().top;
+    const offset = 70;
+    window.scrollTo({
+      top: window.pageYOffset + targetPosition - offset, behavior: 'smooth'
+    });
+  }
 }
 
 function scrollToNoticias() {
-  document.getElementById('noticias').scrollIntoView({ behavior: 'smooth' });
+  const targetElement = document.getElementById('noticias');
+  if (targetElement) {
+    const targetPosition = targetElement.getBoundingClientRect().top;
+    const offset = 100;
+    window.scrollTo({
+      top: window.pageYOffset + targetPosition - offset, behavior: 'smooth'
+    });
+  }
 }
