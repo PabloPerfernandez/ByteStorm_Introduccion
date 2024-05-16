@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduccion Bytestorm</title>
-    <link rel="stylesheet" href="Introduccion_Bytestorm_1.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="Introduccion_Bytestorm_2.css"/>
 </head>
 <body>
     
-    <!--Pop-up-->
+    <!--Pop-up
     <div class="popup-overlay" id="popup">
         <div class="popup-content">
           <h2>¡Bienvenido!</h2>
@@ -18,7 +18,8 @@
           <button onclick="closePopup()">Close</button>
           <button onclick="disablePopup()">Don't Show Again</button>
         </div>
-      </div>
+      </div> -->
+      
 
     <!--Encabezado
     <header>
@@ -37,38 +38,68 @@
         </section>
     </header> -->
     <!-- Navbar -->
-    <nav class="navbar container-fluid sticky navbar-expand bg-light navbar-light">
+    <nav class="navbar navbar-expand-lg fixed-top container-fluid bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a onclick="scrollToDescripcion()">DESCRIPCIÓN</a>
-            </li>
-            <li class="nav-item">
-                <a onclick="scrollToMision()">MISIÓN</a>
-            </li>
-            <li class="nav-item">
-                <a onclick="scrollToVision()">VISIÓN</a>
-            </li>
-            <li class="nav-item">
-                <a onclick="scrollToNoticias()">NOTICIAS</a>
-            </li>
-            <li class="nav-item">
-                <a href="Introduccion_Bytestorm_1.html">REGRESAR</a>
-            </li> 
-        </ul>
+            <a class="navbar-brand" href="#">ByteStorm Solutions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li><a onclick="scrollToDescripcion()">DESCRIPCIÓN</a></li>
+                    <li><a onclick="scrollToMision()">MISIÓN</a></li>
+                    <li><a onclick="scrollToVision()">VISIÓN</a></li>
+                    <li><a onclick="scrollToNoticias()">NOTICIAS</a></li>
+                    <li><a href="Introduccion_Bytestorm_1.html">REGRESAR</a></li>
+                </ul>
+                <span class="icon">
+                    <img src="sun-regular.png" id="Boton">
+                </span>
+            </div>
         </div>
     </nav>
 
+    <!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+    Open modal
+  </button>
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">¡Bienvenido!</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            Te encuentras en la web oficial de ByteStorm solutions, la empresa líder de ciberseguridad del siglo 22.
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No volver a mostrar</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
      <!--Sección Principal-->
     <main>
-        <section class="gridMain">
-            <div class="gridDes"></div>
-            <div class="gridMis"></div>
-            <div class="gridVis"></div>
-            <div class="gridDes-T">
-                <a id="descripcion"></a>
-                <h3>Cíberseguridad en su máxima expresión</h3>
-                <p>
+        <a id="descripcion"></a>
+        <div class="card" style="width: 60rem">
+            <img src="https://unade.edu.mx/wp-content/uploads/2020/06/la-ciberseguridad-en-la-red.jpg" class="card-img-top" alt="Dummy">
+            <div class="card-body">
+              <h5 class="card-title">Ciberseguridad en su máxima expresión</h5>
+                <p class="card-text">
                     "ByteStorm Solutions es una empresa líder en el campo
                     de la cíberseguridad. Velamos por proteger a todo individual,
                     hogar y negocios. <br><br> Con una trayectoria de más de nueve décadas
@@ -76,59 +107,35 @@
                     para salvaguardar lo que más importa para nuestros clientes."
                 </p>
             </div>
-            <div class="gridDes-I">
-                <article>
-                    <img src="https://unade.edu.mx/wp-content/uploads/2020/06/la-ciberseguridad-en-la-red.jpg" alt="Dummy"/>
-                </article>
-            </div>
-            <div class="gridMis-T">
-                <a id="mision"></a>
-                <h3>El método Bytestorm</h3>
-                <p>
-                    "Nuestra empresa ofrece todo tipo de trato personalizado para
-                    cumplir con la necesidad de todo cliente. En Bytestorm contamos con
-                    la última tecnología en sistemas de detección y prevención de
-                    intrusiones, en análisis predictivo de amenazas y toda clase de opciones
-                    con precios económicos, para automatizar la anticipación, localización y neutralización de
-                    toda clase de ataques por medios digitales antes de que causen daño. <br><br>
-                    Utilizamos algoritmos avanzados de aprendizaje automático para identificar patrones
-                    y anomalías en tiempo real, asegurando una protección proactiva contra las
-                    amenazas digitales que están emergiendo en estos últimos años."
+        </div>
+        <a id="mision"></a>
+        <div class="card" style="width: 60rem">
+            <img src="https://micr-sai.com.mx/wp-content/uploads/2021/04/capacitacion-en-ciberseguridad.jpg" class="card-img-top" alt="Dummy">
+            <div class="card-body">
+              <h5 class="card-title">El método Bytestorm</h5>
+                <p class="card-text">
+                    "ByteStorm Solutions es una empresa líder en el campo
+                    de la cíberseguridad. Velamos por proteger a todo individual,
+                    hogar y negocios. <br><br> Con una trayectoria de más de nueve décadas
+                    en el mercado, nos hemos consolidado como el socio de confianza
+                    para salvaguardar lo que más importa para nuestros clientes."
                 </p>
             </div>
-            <div class="gridMis-I">
-                <article>
-                    <img src="https://micr-sai.com.mx/wp-content/uploads/2021/04/capacitacion-en-ciberseguridad.jpg" alt="Dummy"/>
-                </article>
-            </div>
-            <div class="gridVis-T">
-                <a id="vision"></a>
-                <h3>Un mundo sin cíber-amenazas</h3>
-                <p>
+        </div>
+        <a id="vision"></a>
+        <div class="card" style="width: 60rem">
+            <img src="https://wallpaperaccess.com/full/1303168.jpg" class="card-img-top" alt="Dummy">
+            <div class="card-body">
+              <h5 class="card-title">Un mundo sin cíber-amenazas</h5>
+                <p class="card-text">
                     "En Guardian Security Solutions velamos por un mundo donde somos más que una empresa de seguridad; somos los arquitectos de una sociedad segura,
-                    donde cada persona puede vivir sin miedo y prosperar plenamente. <br><br>                    Para ello, buscamos que la seguridad no es solo una preocupación individual, sino un valor compartido por toda la sociedad.
+                    donde cada persona puede vivir sin miedo y prosperar plenamente. <br><br> Para ello, buscamos que la seguridad no es solo una preocupación individual, sino un valor compartido por toda la sociedad.
                     Buscamos la existencia de una colaboración estrecha entre las comunidades, las autoridades locales y las empresas de seguridad para crear un entorno seguro y acogedor para todos."
                 </p>
             </div>
-            <div class="gridVis-I">
-                <article>
-                    <img src="https://wallpaperaccess.com/full/1303168.jpg" alt="Dummy"/>
-                </article>
-            </div>
-            <div class="gridSpaceTop"></div>
-            <div class="gridSpaceBot"></div>
-            <div class="gridBlank"></div>
-            <div class="gridBlank"></div>
-            <div class="gridBlank"></div>
-            <div class="gridBlank"></div>
-            <div class="gridBlank"></div>
-            <div class="gridBlank"></div>
-            <div class="gridBlank"></div>
-            <div class="gridBlank"></div>
-            <div class="gridBlank"></div>
-        </section>
+        </div>
         <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <section id="demo" class="carousel slide" data-bs-ride="carousel" style="width: 60rem">
 
             <!-- Indicators/dots -->
             <div class="carousel-indicators">
@@ -139,6 +146,7 @@
             <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
             </div>
         
+            <a id="noticias"></a>
             <!-- The slideshow/carousel -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -165,30 +173,26 @@
             <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
                 <span class="carousel-control-next-icon"></span>
             </button>
-        </div>
+        </section>
     </main>
 
      <!--Pie de página-->
-    <footer>
-        <section>
-            <ul class="contactInfo">
-                <a class="mailLink" href="mailto:Support@bytestorm.com">Contacta con nosotros</a>
-                <a>© ByteStorm 2024</a>
-            </ul>
-        </section>
-        <nav>
-            <ul class="rrss">
-                <a href="https://www.instagram.com/" target="_blank">
-                    <p>Instagram</p>
-                </a>
-                <a href="https://twitter.com/" target="_blank">
-                    <p>Twitter</p>
-                </a>
-                <a href="https://facebook.com/" target="_blank">
-                    <p>Facebook</p>
-                </a>
-            </ul>
-        </nav>
+    <footer class="navbar navbar-expand-lg container-fluid bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <section>
+                <ul class="contactInfo">
+                    <a class="mailLink" href="mailto:Support@bytestorm.com">Contacta con nosotros</a>
+                    <a>© ByteStorm 2024</a>
+                </ul>
+            </section>
+            <section>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                    <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                    <li><a href="https://facebook.com/" target="_blank">Facebook</a></li>
+                </ul>
+            </section>
+        </div>
     </footer>
     <script src="Introducción_ByteStorm_1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
