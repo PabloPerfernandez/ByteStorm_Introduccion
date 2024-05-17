@@ -20,23 +20,6 @@
         </div>
       </div> -->
       
-
-    <!--Encabezado
-    <header>
-        <section>
-            <h1 class="headerTitle">ByteStorm Solutions</h1>
-            <ul class="menu">
-              <li><t><a onclick="scrollToDescripcion()">DESCRIPCIÓN</a></t></li>
-              <li><t><a onclick="scrollToMision()">MISIÓN</a></t></li>
-              <li><t><a onclick="scrollToVision()">VISIÓN</a></t></li>
-              <li><t><a onclick="scrollToNoticias()">NOTICIAS</a></t></li>
-              <li><t><a href="Introduccion_Bytestorm_1.html">REGRESAR</a></t></li>
-            </ul>
-        </section>
-        <section class="icon">
-            <img src="sun-regular.png" id="Boton">
-        </section>
-    </header> -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top container-fluid bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
@@ -45,7 +28,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 headertxt">
                     <li><a onclick="scrollToDescripcion()">DESCRIPCIÓN</a></li>
                     <li><a onclick="scrollToMision()">MISIÓN</a></li>
                     <li><a onclick="scrollToVision()">VISIÓN</a></li>
@@ -59,43 +42,32 @@
         </div>
     </nav>
 
-    <!-- Button to Open the Modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-    Open modal
-  </button>
-  
-  <!-- The Modal -->
-  <div class="modal" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">¡Bienvenido!</h4>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    <!-- The Modal -->
+    <div class="modal modal-fade modal-dialog modal-dialog-centered" id="popup" tabindex="-1">
+        <div class="modal-content">
+        
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">¡Bienvenido!</h4>
+            </div>
+        
+            <!-- Modal body -->
+            <div class="modal-body">
+                    Te encuentras en la web oficial de ByteStorm solutions, la empresa líder de ciberseguridad del siglo 22.
+            </div>
+        
+                <!-- Modal footer -->
+            <div class="modal-footer"> 
+                <button type="button" onclick="closePopup()" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" onclick="disablePopup()" class="btn btn-danger" data-bs-dismiss="modal">No volver a mostrar</button>
+            </div>
         </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
-            Te encuentras en la web oficial de ByteStorm solutions, la empresa líder de ciberseguridad del siglo 22.
-        </div>
-  
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No volver a mostrar</button>
-        </div>
-  
-      </div>
     </div>
-  </div>
   
      <!--Sección Principal-->
     <main>
         <a id="descripcion"></a>
-        <div class="card" style="width: 60rem">
+        <div class="card container-sm" style="width: 60rem">
             <img src="https://unade.edu.mx/wp-content/uploads/2020/06/la-ciberseguridad-en-la-red.jpg" class="card-img-top" alt="Dummy">
             <div class="card-body">
               <h5 class="card-title">Ciberseguridad en su máxima expresión</h5>
@@ -109,7 +81,7 @@
             </div>
         </div>
         <a id="mision"></a>
-        <div class="card" style="width: 60rem">
+        <div class="card container-sm" style="width: 60rem">
             <img src="https://micr-sai.com.mx/wp-content/uploads/2021/04/capacitacion-en-ciberseguridad.jpg" class="card-img-top" alt="Dummy">
             <div class="card-body">
               <h5 class="card-title">El método Bytestorm</h5>
@@ -123,7 +95,7 @@
             </div>
         </div>
         <a id="vision"></a>
-        <div class="card" style="width: 60rem">
+        <div class="card container-sm" style="width: 60rem">
             <img src="https://wallpaperaccess.com/full/1303168.jpg" class="card-img-top" alt="Dummy">
             <div class="card-body">
               <h5 class="card-title">Un mundo sin cíber-amenazas</h5>
@@ -135,7 +107,7 @@
             </div>
         </div>
         <!-- Carousel -->
-        <section id="demo" class="carousel slide" data-bs-ride="carousel" style="width: 60rem">
+        <section id="demo" class="carousel slide carousel-fade container-sm" data-bs-ride="carousel" style="width: 60rem">
 
             <!-- Indicators/dots -->
             <div class="carousel-indicators">
@@ -151,18 +123,37 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <a href="https://www.abc.es/internacional/acusan-china-ciberataque-acceder-datos-personales-soldados-20240507094359-nt.html" target="_blank"><img src="https://s3.abcstatics.com/abc/www/multimedia/internacional/2024/05/07/1480725173-kZX-U602421165816WwC-1200x840@diario_abc.jpg" alt="imgChina">></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Ciberataque Chino</h5>
+                        <p>Acusan a China de acceder a los datos personales de sus soldados.</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <a href="https://www.abc.es/tecnologia/acabo-poner-1234-reino-unido-prohibe-contrasenas-20240430103459-nt.html" target="_blank"><img src="https://s3.abcstatics.com/abc/www/multimedia/tecnologia/2024/04/30/contrasena-REvCWvKLB3hinfpDeBjBUbK-1200x840@diario_abc.jpg" alt="imgPassword"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Reino Unido prohíbe contraseñas</h5>
+                        <p>Reino Unido prohíbe las contraseñas débiles por defecto.</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <a href="https://www.abc.es/tecnologia/hackers-espanoles-luchan-lado-oscuro-internet-20240505170524-nt.html" target="_blank"><img src="https://s2.abcstatics.com/abc/www/multimedia/tecnologia/2024/05/04/diego-jurado-permuy-REoTUBvotnLTb0okSYEeNuI-1200x840@diario_abc.JPG" alt="imgHacker"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Hackers Españoles</h5>
+                        <p>Un grupo de hackers españoles luchan contra el lado oscuro de internet.</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <a href="https://www.abc.es/tecnologia/espana-encargada-formar-startups-ciberseguridad-otan-20240412103929-nt.html" target="_blank"><img src="https://s3.abcstatics.com/abc/www/multimedia/tecnologia/2024/04/12/ciber-RIR3imBqI6CIg3wOOP0oNxK-1200x840@diario_abc.jpg" alt="imgOtan"></a>
-                </div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Startups Españoles</h5>
+                        <p>España es la encargada de formar startups de ciberseguridad en la Otan.</p>
+                    </div></div>
                 <div class="carousel-item">
                     <a href="https://www.abc.es/internacional/corea-sur-denuncia-campana-ciberataques-norcoreanos-industria-20240423113345-nt.html" target="_blank"><img src="https://s2.abcstatics.com/abc/www/multimedia/internacional/2024/04/23/1480141636-k9cE-U602175247405oNH-1200x840@diario_abc.jpg" alt="imgKorea"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Denuncias a Corea del Norte</h5>
+                        <p>Corea del Sur denuncia una campaña de ciberataques provenientes de Corea del Norte.</p>
+                    </div>
                 </div>
             </div>
   
@@ -182,7 +173,7 @@
             <section>
                 <ul class="contactInfo">
                     <a class="mailLink" href="mailto:Support@bytestorm.com">Contacta con nosotros</a>
-                    <a>© ByteStorm 2024</a>
+                    <a class="footerText">© ByteStorm 2024</a>
                 </ul>
             </section>
             <section>
@@ -194,8 +185,8 @@
             </section>
         </div>
     </footer>
-    <script src="Introducción_ByteStorm_1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="Introducción_ByteStorm_1.js"></script>
 </body>
 
 </html>

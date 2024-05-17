@@ -1,10 +1,13 @@
 
 /*Pop-up*/
 document.addEventListener("DOMContentLoaded", function() {
-  var popup = document.getElementById("popup");
   var isDisabled = localStorage.getItem("popupDisabled");
-  if (!isDisabled) {
-    popup.style.display = "block";
+  if (true) {
+    /* popup.style.display = "block"; */
+    /*var modal = new bootstrap.Modal(document.getElementById("popup"));*/
+    var modal = new bootstrap.Modal("#popup");
+    console.log(modal);
+    modal.show();
   }
 });
 
