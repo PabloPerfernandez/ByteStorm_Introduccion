@@ -69,7 +69,7 @@ nav a {
 nav,
 ul {
     gap: 20px;
-    margin: 0.5vw;
+    margin-left: 0.5vw;  
 }
 
 header li:hover {
@@ -115,7 +115,6 @@ main {
     flex-direction: column;
     align-items: center;
     color: var(--primary-text-color);
-    max-width: 100vw;
 }
 
 main section img {
@@ -134,14 +133,15 @@ main section img {
 }
 /* Pie de Página */
 
+footer {
+    background-color: var(--secondary-color);
+}
+
 footer a {
     text-decoration: unset;
     color: var(--secondary-text-color);
     margin-right: 3vw;
 }
-
-
-    
 
 .mailLink {
     font-size: 1vw;
@@ -184,9 +184,6 @@ footer a {
 @media all and (max-width: 1300px) {
     header {
         font-size: 0.8em;
-    }
-    .imgGrid {
-        --num-cols: 2; 
     }
     footer a {
         font-size: 1vw;

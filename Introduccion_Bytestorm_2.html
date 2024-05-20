@@ -9,19 +9,8 @@
     <link rel="stylesheet" href="Introduccion_Bytestorm_2.css"/>
 </head>
 <body>
-    
-    <!--Pop-up
-    <div class="popup-overlay" id="popup">
-        <div class="popup-content">
-          <h2>¡Bienvenido!</h2>
-          <p>Te encuentras en la web oficial de ByteStorm solutions, la empresa líder de ciberseguridad del siglo 22.</p>
-          <button onclick="closePopup()">Close</button>
-          <button onclick="disablePopup()">Don't Show Again</button>
-        </div>
-      </div> -->
-      
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top container-fluid bg-body-tertiary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg fixed-top container-fluid">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">ByteStorm Solutions</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,10 +18,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 headertxt">
-                    <li><a onclick="scrollToDescripcion()">DESCRIPCIÓN</a></li>
-                    <li><a onclick="scrollToMision()">MISIÓN</a></li>
-                    <li><a onclick="scrollToVision()">VISIÓN</a></li>
-                    <li><a onclick="scrollToNoticias()">NOTICIAS</a></li>
+                    <li><a href="#" onclick="scrollToDescripcion()">DESCRIPCIÓN</a></li>
+                    <li><a href="#" onclick="scrollToMision()">MISIÓN</a></li>
+                    <li><a href="#" onclick="scrollToVision()">VISIÓN</a></li>
+                    <li><a href="#" onclick="scrollToNoticias()">NOTICIAS</a></li>
                     <li><a href="Introduccion_Bytestorm_1.html">REGRESAR</a></li>
                 </ul>
                 <span class="icon">
@@ -43,31 +32,31 @@
     </nav>
 
     <!-- The Modal -->
-    <div class="modal modal-fade modal-dialog modal-dialog-centered" id="popup" tabindex="-1">
-        <div class="modal-content">
-        
+    <div class="modal fade modal-dialog modal-dialog-centered" id="popup" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">¡Bienvenido!</h4>
+              <h4 class="modal-title">¡Bienvenido!</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-        
             <!-- Modal body -->
             <div class="modal-body">
-                    Te encuentras en la web oficial de ByteStorm solutions, la empresa líder de ciberseguridad del siglo 22.
+              Te encuentras en la web oficial de ByteStorm solutions, la empresa líder de ciberseguridad del siglo 22.
             </div>
-        
-                <!-- Modal footer -->
+            <!-- Modal footer -->
             <div class="modal-footer"> 
-                <button type="button" onclick="closePopup()" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" onclick="disablePopup()" class="btn btn-danger" data-bs-dismiss="modal">No volver a mostrar</button>
+              <button type="button" onclick="closePopup()" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" onclick="disablePopup()" class="btn btn-danger" data-bs-dismiss="modal">No volver a mostrar</button>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
   
      <!--Sección Principal-->
     <main>
         <a id="descripcion"></a>
-        <div class="card container-sm" style="width: 60rem">
+        <div class="card container-sm">
             <img src="https://unade.edu.mx/wp-content/uploads/2020/06/la-ciberseguridad-en-la-red.jpg" class="card-img-top" alt="Dummy">
             <div class="card-body">
               <h5 class="card-title">Ciberseguridad en su máxima expresión</h5>
@@ -81,7 +70,7 @@
             </div>
         </div>
         <a id="mision"></a>
-        <div class="card container-sm" style="width: 60rem">
+        <div class="card container-sm">
             <img src="https://micr-sai.com.mx/wp-content/uploads/2021/04/capacitacion-en-ciberseguridad.jpg" class="card-img-top" alt="Dummy">
             <div class="card-body">
               <h5 class="card-title">El método Bytestorm</h5>
@@ -95,7 +84,7 @@
             </div>
         </div>
         <a id="vision"></a>
-        <div class="card container-sm" style="width: 60rem">
+        <div class="card container-sm">
             <img src="https://wallpaperaccess.com/full/1303168.jpg" class="card-img-top" alt="Dummy">
             <div class="card-body">
               <h5 class="card-title">Un mundo sin cíber-amenazas</h5>
@@ -106,8 +95,51 @@
                 </p>
             </div>
         </div>
+
+        <!-- Grid -->
+        <div class="container-fluid mt-3">
+            <div class="row">
+              <div class="col-6 col-md-4 p-3 text-white">
+                <div class="card">
+                    <div class="card-header">Versión de prueba</div>
+                    <div class="card-body">Gratis (30 días)</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 p-3 text-white">
+                <div class="card">
+                    <div class="card-header">Licencia de Estudiante</div>
+                    <div class="card-body">5,00€/mes</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 p-3 text-white">
+                <div class="card">
+                    <div class="card-header">Licencia estándar</div>
+                    <div class="card-body">8,00€/mes</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 p-3 text-white">
+                <div class="card">
+                    <div class="card-header">Pack familiar</div>
+                    <div class="card-body">30,00€/mes (4 licencias)</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 p-3 text-white">
+                <div class="card">
+                    <div class="card-header">Pack empresa pequeña</div>
+                    <div class="card-body">106,00€/mes (15 licencias)</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 p-3 text-white">
+                <div class="card">
+                    <div class="card-header">Pack empresa grande</div>
+                    <div class="card-body">450,00€/mes (60 licencias)</div>
+                </div>
+            </div>
+            </div>
+        </div>
+
         <!-- Carousel -->
-        <section id="demo" class="carousel slide carousel-fade container-sm" data-bs-ride="carousel" style="width: 60rem">
+        <section id="demo" class="carousel slide carousel-fade container-sm" data-bs-ride="carousel">
 
             <!-- Indicators/dots -->
             <div class="carousel-indicators">
@@ -122,7 +154,7 @@
             <!-- The slideshow/carousel -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="https://www.abc.es/internacional/acusan-china-ciberataque-acceder-datos-personales-soldados-20240507094359-nt.html" target="_blank"><img src="https://s3.abcstatics.com/abc/www/multimedia/internacional/2024/05/07/1480725173-kZX-U602421165816WwC-1200x840@diario_abc.jpg" alt="imgChina">></a>
+                    <a href="https://www.abc.es/internacional/acusan-china-ciberataque-acceder-datos-personales-soldados-20240507094359-nt.html" target="_blank"><img src="https://s3.abcstatics.com/abc/www/multimedia/internacional/2024/05/07/1480725173-kZX-U602421165816WwC-1200x840@diario_abc.jpg" alt="imgChina"></a>
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Ciberataque Chino</h5>
                         <p>Acusan a China de acceder a los datos personales de sus soldados.</p>
@@ -168,7 +200,7 @@
     </main>
 
      <!--Pie de página-->
-    <footer class="navbar navbar-expand-lg container-fluid bg-body-tertiary" data-bs-theme="dark">
+    <footer class="navbar navbar-expand-sm container-fluid">
         <div class="container-fluid">
             <section>
                 <ul class="contactInfo">
@@ -186,7 +218,7 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="Introducción_ByteStorm_1.js"></script>
+    <script src="Introducción_ByteStorm_2.js"></script>
 </body>
 
 </html>

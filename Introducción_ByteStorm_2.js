@@ -1,16 +1,19 @@
 
 /*Pop-up*/
 document.addEventListener("DOMContentLoaded", function() {
-  var popup = document.getElementById("popup");
   var isDisabled = localStorage.getItem("popupDisabled");
   if (!isDisabled) {
-    popup.style.display = "block";
+    var popupElement = document.getElementById("popup");
+    var modal = new bootstrap.Modal(popupElement);
+    console.log(modal);
+    modal.show();
   }
 });
 
 function closePopup() {
   var popup = document.getElementById("popup");
-  popup.style.display = "none";
+  var modal = bootstrap.Modal.getInstance(popup);
+  modal.hide();
 }
 
 function disablePopup() {
@@ -18,11 +21,11 @@ function disablePopup() {
   closePopup();
 }
 
-/* Dark Theme*/
+
+/* Dark Theme */
 var icon = document.getElementById("Boton");
 var isDarkMode = localStorage.getItem("darkMode");
 
-// Function to toggle dark mode
 function toggleDarkMode() {
     document.body.classList.toggle("darkTheme");
     if (document.body.classList.contains("darkTheme")) {
@@ -34,15 +37,14 @@ function toggleDarkMode() {
     }
 }
 
-// Check if dark mode is enabled in local storage
 if (isDarkMode === "enabled") {
     toggleDarkMode();
 }
 
-// Toggle dark mode on button click
 icon.onclick = toggleDarkMode;
 
-/*Menu*/
+
+/* Scroll */
 function scrollToDescripcion() {
   const targetElement = document.getElementById('descripcion');
   if (targetElement) {
